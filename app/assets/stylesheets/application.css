@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: orangered;
+}
+
+ .bold-text {
+  font-weight: bold;
+ }
+
+#task-description {
+  background-color: pink;
+  width: 400px;
+  padding: 10px;
+  border-radius: 4px;
+}
