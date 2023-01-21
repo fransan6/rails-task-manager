@@ -1,0 +1,7 @@
+<%= form_with model: task do |f| %>
+  <%= f.label 'Title:', class: "label bold-text form-display" %>
+  <%= f.text_field :title, class: "form-display" %>
+  <%= f.label 'Details:', class: "label bold-text form-display" %>
+  <%= f.text_field :details, id: "above-submit", class: "form-display" %>
+  <%= f.submit "Submit", id: "button" %>
+<% end %>

@@ -3,7 +3,12 @@
   <% @tasks.each do |task| %>
   <div>
     <input type="checkbox" id="tasks" name="tasks">
-    <label for="tasks"><span class="bold-text"><%= link_to task.title, task_path(task) %></label>
+    <label for="tasks"><span class="bold-text hover"><%= link_to task.title, task_path(3) %>
+    </label>
+    <%= link_to task_path(task), data: {turbo_method: :delete, turbo_confirm: "Delete '#{task.title}'?"} do %>
+      <i class="fa-solid fa-cat"></i>
+    <% end %>
   </div>
   <% end %>
 </ul>
+<%= link_to 'Create a task?', new_task_path(@task) %>
